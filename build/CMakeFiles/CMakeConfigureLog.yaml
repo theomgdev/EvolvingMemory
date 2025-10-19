@@ -1,0 +1,506 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:53 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags: --keep;--keep-dir;tmp -v
+      
+      The output was:
+      0
+      .NET Framework için Microsoft (R) Build Engine sürüm 16.11.2+f32259642
+      Telif Hakkı (C) Microsoft Corporation. Tüm hakları saklıdır.
+      
+      Oluşturma başlatıldı: 19.10.2025 23:29:05.
+      1 düğümünde "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" projesi (varsayılan hedefler).
+      PrepareForBuild:
+        "Debug\\" dizini oluşturuluyor.
+        "Debug\\CompilerIdCUDA.tlog\\" dizini oluşturuluyor.
+      InitializeBuildStatus:
+        "AlwaysCreate" belirtildiği için "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild" oluşturuluyor.
+      AddCudaCompileDeps:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=11 /D__CUDACC_VER_MINOR__=8 /D_MBCS /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include" /I. /FIcuda_runtime.h /c C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CMakeCUDACompilerId.cu 
+      "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" projesi (1) 1 düğümünde "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (1:2) oluşturuyor (CudaBuildCore hedef).
+      CudaBuildCore:
+        Compiling CUDA source file CMakeCUDACompilerId.cu...
+        "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug" dizini oluşturuluyor.
+        cmd.exe /C "C:\\Users\\cksof\\AppData\\Local\\Temp\\tmpbb1e153a273940d5a0d4d0aa907dc63d.cmd"
+        "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include"  -G   --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FdDebug\\vc142.pdb /FS /Zi /RTC1 /MDd " -o C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CMakeCUDACompilerId.cu"
+        
+        C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include"  -G   --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FdDebug\\vc142.pdb /FS /Zi /RTC1 /MDd " -o C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" 
+        #$ _NVVM_BRANCH_=nvvm
+        #$ _SPACE_= 
+        #$ _CUDART_=cudart
+        #$ _HERE_=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin
+        #$ _THERE_=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin
+        #$ _TARGET_SIZE_=
+        #$ _TARGET_DIR_=
+        #$ _TARGET_SIZE_=64
+        #$ _WIN_PLATFORM_=x64
+        #$ TOP=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin/..
+        #$ NVVMIR_LIBRARY_DIR=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin/../nvvm/libdevice
+        #$ PATH=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin/../nvvm/bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin/../lib;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\x64;;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\x86;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\tools;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\ide;C:\\Program Files (x86)\\HTML Help Workshop;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;;C:\\Program Files\\ImageMagick-7.1.2-Q16-HDRI;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\libnvvp;C:\\Python313\\Scripts\\;C:\\Python313\\;c:\\Users\\cksof\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Users\\cksof\\AppData\\Local\\Microsoft\\WindowsApps;c:\\Users\\cksof\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR;C:\\Program Files\\CMake\\bin;C:\\MinGW\\bin;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64;C:\\Program Files\\Graphviz\\bin;C:\\Program Files (x86)\\cloudflared\\;C:\\Users\\cksof\\.cargo\\bin;C:\\Users\\cksof\\anaconda3;C:\\Users\\cksof\\anaconda3\\Library\\mingw-w64\\bin;C:\\Users\\cksof\\anaconda3\\Library\\usr\\bin;C:\\Users\\cksof\\anaconda3\\Library\\bin;C:\\Users\\cksof\\anaconda3\\Scripts;C:\\Users\\cksof\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\cksof\\AppData\\Roaming\\npm;C:\\Users\\cksof\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-7.1-full_build\\bin;C:\\CKAPP;C:\\Users\\cksof\\AppData\\Roaming\\Python\\Python313\\Scripts;C:\\MinGW\\bin;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64;C:\\Users\\cksof\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\cksof\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin;C:\\Program Files\\Graphviz\\bin;C:\\Users\\cksof\\AppData\\Local\\Muse Hub\\lib;C:\\Users\\cksof\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;c:\\Users\\cksof\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand;
+        #$ INCLUDES="-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin/../include"  
+        #$ LIBRARIES=  "/LIBPATH:C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin/../lib/x64"
+        #$ CUDAFE_FLAGS=--sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10"
+        #$ PTXAS_FLAGS=
+        CMakeCUDACompilerId.cu
+        #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-9.res" > "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-8_CMakeCUDACompilerId.cpp1.ii" 
+        CMakeCUDACompilerId.cu
+        #$ erase C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-9.res
+        #$ cicc --microsoft_version=1929 --msvc_target_version=1929 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/3.31.5/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10"  -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "tmpxft_00011664_00000000-4_CMakeCUDACompilerId.fatbin.c" -g -O0 -tused --gen_module_id_file --module_id_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-5_CMakeCUDACompilerId.module_id" --gen_c_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.c" --stub_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.gpu"  "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-8_CMakeCUDACompilerId.cpp1.ii" -o "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.ptx"
+        #$ ptxas -arch=sm_52 -m64 -g --dont-merge-basicblocks --return-at-end "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.ptx"  -o "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-10_CMakeCUDACompilerId.sm_52.cubin" 
+        #$ fatbinary -64 --ident="C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/3.31.5/CompilerIdCUDA/CMakeCUDACompilerId.cu" --cmdline="-g --dont-merge-basicblocks --return-at-end " --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -g "--image3=kind=elf,sm=52,file=C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-10_CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.ptx" --embedded-fatbin="C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-4_CMakeCUDACompilerId.fatbin.c" 
+        #$ erase C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-4_CMakeCUDACompilerId.fatbin
+        #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-11.res" > "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-6_CMakeCUDACompilerId.cpp4.ii" 
+        CMakeCUDACompilerId.cu
+        #$ erase C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-11.res
+        #$ cudafe++ --microsoft_version=1929 --msvc_target_version=1929 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/3.31.5/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10" --m64 --parse_templates --gen_c_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --module_id_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-5_CMakeCUDACompilerId.module_id" "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-6_CMakeCUDACompilerId.cpp4.ii" 
+        #$ cl.exe @"C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-12.res" -Fo"C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/3.31.5/CompilerIdCUDA/x64/Debug/CMakeCUDACompilerId.cu.obj" 
+        tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.cpp
+        #$ erase C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-12.res
+      "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" Projesini Oluşturma İşlemi Tamamlandı (CudaBuildCore hedef).
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj"
+           .\\CompilerIdCUDA.lib kitaplığı ve .\\CompilerIdCUDA.exp nesnesi oluşturuluyor
+      LINK : warning LNK4098: defaultlib 'LIBCMT' diğer kitaplıkların kullanımı ile çakışıyor; /NODEFAULTLIB:library kullanın [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+        CompilerIdCUDA.vcxproj -> C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.exe
+      PostBuildEvent:
+        echo CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe
+        :VCEnd
+        CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe
+      FinalizeBuildStatus:
+        "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild" dosyası siliniyor.
+        "Debug\\CompilerIdCUDA.tlog\\CompilerIdCUDA.lastbuildstate" öğesine erişiliyor.
+      "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" Projesini Oluşturma İşlemi Tamamlandı (varsayılan hedefler).
+      
+      Oluşturma başarılı oldu.
+      
+      "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (varsayılan hedef) (1) ->
+      (Link hedefi) -> 
+        LINK : warning LNK4098: defaultlib 'LIBCMT' diğer kitaplıkların kullanımı ile çakışıyor; /NODEFAULTLIB:library kullanın [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]
+      
+          1 Uyarı
+          0 Hata
+      
+      Geçen Süre 00:00:02.50
+      
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.exe"
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.exp"
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.lib"
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "CompilerIdCUDA.vcxproj"
+      
+      The CUDA compiler identification is NVIDIA, found in:
+        C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/3.31.5/CompilerIdCUDA/CompilerIdCUDA.exe
+      The host compiler identification is MSVC
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeNVCCParseImplicitInfo.cmake:128 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:242 (cmake_nvcc_parse_implicit_info)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CUDA nvcc implicit link information:
+        found 'PATH=' string: [C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin/../nvvm/bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin/../lib;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\x64;;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\x86;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\tools;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\ide;C:\\Program Files (x86)\\HTML Help Workshop;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;;C:\\Program Files\\ImageMagick-7.1.2-Q16-HDRI;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\libnvvp;C:\\Python313\\Scripts\\;C:\\Python313\\;c:\\Users\\cksof\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Users\\cksof\\AppData\\Local\\Microsoft\\WindowsApps;c:\\Users\\cksof\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR;C:\\Program Files\\CMake\\bin;C:\\MinGW\\bin;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64;C:\\Program Files\\Graphviz\\bin;C:\\Program Files (x86)\\cloudflared\\;C:\\Users\\cksof\\.cargo\\bin;C:\\Users\\cksof\\anaconda3;C:\\Users\\cksof\\anaconda3\\Library\\mingw-w64\\bin;C:\\Users\\cksof\\anaconda3\\Library\\usr\\bin;C:\\Users\\cksof\\anaconda3\\Library\\bin;C:\\Users\\cksof\\anaconda3\\Scripts;C:\\Users\\cksof\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\cksof\\AppData\\Roaming\\npm;C:\\Users\\cksof\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-7.1-full_build\\bin;C:\\CKAPP;C:\\Users\\cksof\\AppData\\Roaming\\Python\\Python313\\Scripts;C:\\MinGW\\bin;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64;C:\\Users\\cksof\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\cksof\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin;C:\\Program Files\\Graphviz\\bin;C:\\Users\\cksof\\AppData\\Local\\Muse Hub\\lib;C:\\Users\\cksof\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;c:\\Users\\cksof\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand;]
+        found 'LIBRARIES=' string: ["/LIBPATH:C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin/../lib/x64"]
+        found 'INCLUDES=' string: ["-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin/../include"  ]
+        considering line: [.NET Framework için Microsoft (R) Build Engine sürüm 16.11.2+f32259642]
+        considering line: [Telif Hakkı (C) Microsoft Corporation. Tüm hakları saklıdır.]
+        considering line: [Oluşturma başlatıldı: 19.10.2025 23:29:05.]
+        considering line: [1 düğümünde "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" projesi (varsayılan hedefler).]
+        considering line: [PrepareForBuild:]
+        considering line: [  "Debug\\" dizini oluşturuluyor.]
+        considering line: [  "Debug\\CompilerIdCUDA.tlog\\" dizini oluşturuluyor.]
+        considering line: [InitializeBuildStatus:]
+        considering line: [  "AlwaysCreate" belirtildiği için "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild" oluşturuluyor.]
+        considering line: [AddCudaCompileDeps:]
+        considering line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=11 /D__CUDACC_VER_MINOR__=8 /D_MBCS /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include" /I. /FIcuda_runtime.h /c C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CMakeCUDACompilerId.cu ]
+        considering line: ["C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" projesi (1) 1 düğümünde "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (1:2) oluşturuyor (CudaBuildCore hedef).]
+        considering line: [CudaBuildCore:]
+        considering line: [  Compiling CUDA source file CMakeCUDACompilerId.cu...]
+        considering line: [  "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug" dizini oluşturuluyor.]
+        considering line: [  cmd.exe /C "C:\\Users\\cksof\\AppData\\Local\\Temp\\tmpbb1e153a273940d5a0d4d0aa907dc63d.cmd"]
+        considering line: [  "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include"  -G   --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FdDebug\\vc142.pdb /FS /Zi /RTC1 /MDd " -o C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CMakeCUDACompilerId.cu"]
+        considering line: [  ]
+        considering line: [  C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include"  -G   --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FdDebug\\vc142.pdb /FS /Zi /RTC1 /MDd " -o C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" ]
+        considering line: [                                  CMakeCUDACompilerId.cu]
+        considering line: [  #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-9.res" > "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-8_CMakeCUDACompilerId.cpp1.ii" ]
+        considering line: [  CMakeCUDACompilerId.cu]
+        considering line: [  #$ erase C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-9.res]
+        considering line: [  #$ cicc --microsoft_version=1929 --msvc_target_version=1929 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/3.31.5/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10"  -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "tmpxft_00011664_00000000-4_CMakeCUDACompilerId.fatbin.c" -g -O0 -tused --gen_module_id_file --module_id_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-5_CMakeCUDACompilerId.module_id" --gen_c_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.c" --stub_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.gpu"  "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-8_CMakeCUDACompilerId.cpp1.ii" -o "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.ptx"]
+        considering line: [  #$ ptxas -arch=sm_52 -m64 -g --dont-merge-basicblocks --return-at-end "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.ptx"  -o "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-10_CMakeCUDACompilerId.sm_52.cubin" ]
+        considering line: [  #$ fatbinary -64 --ident="C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/3.31.5/CompilerIdCUDA/CMakeCUDACompilerId.cu" --cmdline="-g --dont-merge-basicblocks --return-at-end " --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -g "--image3=kind=elf,sm=52,file=C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-10_CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.ptx" --embedded-fatbin="C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-4_CMakeCUDACompilerId.fatbin.c" ]
+        considering line: [  #$ erase C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-4_CMakeCUDACompilerId.fatbin]
+        considering line: [  #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-11.res" > "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-6_CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [  CMakeCUDACompilerId.cu]
+        considering line: [  #$ erase C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-11.res]
+        considering line: [  #$ cudafe++ --microsoft_version=1929 --msvc_target_version=1929 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/3.31.5/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10" --m64 --parse_templates --gen_c_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --module_id_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-5_CMakeCUDACompilerId.module_id" "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-6_CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [  #$ cl.exe @"C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-12.res" -Fo"C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/3.31.5/CompilerIdCUDA/x64/Debug/CMakeCUDACompilerId.cu.obj" ]
+        considering line: [  tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.cpp]
+        considering line: [  #$ erase C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-12.res]
+        considering line: ["C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" Projesini Oluşturma İşlemi Tamamlandı (CudaBuildCore hedef).]
+        considering line: [Link:]
+        considering line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj"]
+          extracted link line: [link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj"]
+        considering line: [     .\\CompilerIdCUDA.lib kitaplığı ve .\\CompilerIdCUDA.exp nesnesi oluşturuluyor]
+        considering line: [LINK : warning LNK4098: defaultlib 'LIBCMT' diğer kitaplıkların kullanımı ile çakışıyor]
+        considering line: [ /NODEFAULTLIB:library kullanın [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]]
+        considering line: [  CompilerIdCUDA.vcxproj -> C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.exe]
+        considering line: [PostBuildEvent:]
+        considering line: [  echo CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe]
+        considering line: [  :VCEnd]
+        considering line: [  CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe]
+        considering line: [FinalizeBuildStatus:]
+        considering line: [  "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild" dosyası siliniyor.]
+        considering line: [  "Debug\\CompilerIdCUDA.tlog\\CompilerIdCUDA.lastbuildstate" öğesine erişiliyor.]
+        considering line: ["C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" Projesini Oluşturma İşlemi Tamamlandı (varsayılan hedefler).]
+        considering line: [Oluşturma başarılı oldu.]
+        considering line: ["C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (varsayılan hedef) (1) ->]
+        considering line: [(Link hedefi) -> ]
+        considering line: [  LINK : warning LNK4098: defaultlib 'LIBCMT' diğer kitaplıkların kullanımı ile çakışıyor]
+        considering line: [ /NODEFAULTLIB:library kullanın [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]]
+        considering line: [    1 Uyarı]
+        considering line: [    0 Hata]
+        considering line: [Geçen Süre 00:00:02.50]
+        considering line: []
+      
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj"]
+          arg [cuda-fake-ld] ==> ignore
+          arg [link.exe] ==> ignore
+          arg [/ERRORREPORT:QUEUE] ==> ignore
+          arg [/OUT:.\\CompilerIdCUDA.exe] ==> ignore
+          arg [/INCREMENTAL:NO] ==> ignore
+          arg [/NOLOGO] ==> ignore
+          arg [/LIBPATH:C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64] ==> dir [C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64]
+          arg [cudart_static.lib] ==> lib [cudart_static.lib]
+          arg [/MANIFEST] ==> ignore
+          arg [/MANIFESTUAC:level='asInvoker' uiAccess='false'] ==> ignore
+          arg [/manifest:embed] ==> ignore
+          arg [/PDB:.\\CompilerIdCUDA.pdb] ==> ignore
+          arg [/SUBSYSTEM:CONSOLE] ==> ignore
+          arg [/TLBID:1] ==> ignore
+          arg [/DYNAMICBASE] ==> ignore
+          arg [/NXCOMPAT] ==> ignore
+          arg [/IMPLIB:.\\CompilerIdCUDA.lib] ==> ignore MSVC link option
+          arg [/MACHINE:X64] ==> ignore
+          arg [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj] ==> ignore
+        collapse library dir [C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64] ==> [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/lib/x64]
+        implicit libs: [cudart_static.lib]
+        implicit objs: []
+        implicit dirs: [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/lib/x64]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeNVCCParseImplicitInfo.cmake:146 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCUDACompiler.cmake:242 (cmake_nvcc_parse_implicit_info)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CUDA nvcc include information:
+        found 'PATH=' string: [C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin/../nvvm/bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin/../lib;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\x64;;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\x86;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\tools;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\ide;C:\\Program Files (x86)\\HTML Help Workshop;;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\;;C:\\Program Files\\ImageMagick-7.1.2-Q16-HDRI;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\libnvvp;C:\\Python313\\Scripts\\;C:\\Python313\\;c:\\Users\\cksof\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Users\\cksof\\AppData\\Local\\Microsoft\\WindowsApps;c:\\Users\\cksof\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\NvDLISR;C:\\Program Files\\CMake\\bin;C:\\MinGW\\bin;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64;C:\\Program Files\\Graphviz\\bin;C:\\Program Files (x86)\\cloudflared\\;C:\\Users\\cksof\\.cargo\\bin;C:\\Users\\cksof\\anaconda3;C:\\Users\\cksof\\anaconda3\\Library\\mingw-w64\\bin;C:\\Users\\cksof\\anaconda3\\Library\\usr\\bin;C:\\Users\\cksof\\anaconda3\\Library\\bin;C:\\Users\\cksof\\anaconda3\\Scripts;C:\\Users\\cksof\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\cksof\\AppData\\Roaming\\npm;C:\\Users\\cksof\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-7.1-full_build\\bin;C:\\CKAPP;C:\\Users\\cksof\\AppData\\Roaming\\Python\\Python313\\Scripts;C:\\MinGW\\bin;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64;C:\\Users\\cksof\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\cksof\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin;C:\\Program Files\\Graphviz\\bin;C:\\Users\\cksof\\AppData\\Local\\Muse Hub\\lib;C:\\Users\\cksof\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;c:\\Users\\cksof\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand;]
+        found 'LIBRARIES=' string: ["/LIBPATH:C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin/../lib/x64"]
+        found 'INCLUDES=' string: ["-IC:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin/../include"  ]
+        considering line: [.NET Framework için Microsoft (R) Build Engine sürüm 16.11.2+f32259642]
+        considering line: [Telif Hakkı (C) Microsoft Corporation. Tüm hakları saklıdır.]
+        considering line: [Oluşturma başlatıldı: 19.10.2025 23:29:05.]
+        considering line: [1 düğümünde "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" projesi (varsayılan hedefler).]
+        considering line: [PrepareForBuild:]
+        considering line: [  "Debug\\" dizini oluşturuluyor.]
+        considering line: [  "Debug\\CompilerIdCUDA.tlog\\" dizini oluşturuluyor.]
+        considering line: [InitializeBuildStatus:]
+        considering line: [  "AlwaysCreate" belirtildiği için "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild" oluşturuluyor.]
+        considering line: [AddCudaCompileDeps:]
+        considering line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=11 /D__CUDACC_VER_MINOR__=8 /D_MBCS /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include" /I. /FIcuda_runtime.h /c C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CMakeCUDACompilerId.cu ]
+        considering line: ["C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" projesi (1) 1 düğümünde "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (1:2) oluşturuyor (CudaBuildCore hedef).]
+        considering line: [CudaBuildCore:]
+        considering line: [  Compiling CUDA source file CMakeCUDACompilerId.cu...]
+        considering line: [  "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug" dizini oluşturuluyor.]
+        considering line: [  cmd.exe /C "C:\\Users\\cksof\\AppData\\Local\\Temp\\tmpbb1e153a273940d5a0d4d0aa907dc63d.cmd"]
+        considering line: [  "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include"  -G   --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FdDebug\\vc142.pdb /FS /Zi /RTC1 /MDd " -o C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CMakeCUDACompilerId.cu"]
+        considering line: [  ]
+        considering line: [  C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe" -gencode=arch=compute_52,code=\\"sm_52,compute_52\\" --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64" -x cu   -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include" -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include"  -G   --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -v -allow-unsupported-compiler -g  -D_MBCS -Xcompiler "/EHsc /W0 /nologo /Od /FdDebug\\vc142.pdb /FS /Zi /RTC1 /MDd " -o C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" ]
+        considering line: [                                  CMakeCUDACompilerId.cu]
+        considering line: [  #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-9.res" > "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-8_CMakeCUDACompilerId.cpp1.ii" ]
+        considering line: [  CMakeCUDACompilerId.cu]
+        considering line: [  #$ erase C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-9.res]
+        considering line: [  #$ cicc --microsoft_version=1929 --msvc_target_version=1929 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/3.31.5/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10"  -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "tmpxft_00011664_00000000-4_CMakeCUDACompilerId.fatbin.c" -g -O0 -tused --gen_module_id_file --module_id_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-5_CMakeCUDACompilerId.module_id" --gen_c_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.c" --stub_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.gpu"  "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-8_CMakeCUDACompilerId.cpp1.ii" -o "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.ptx"]
+        considering line: [  #$ ptxas -arch=sm_52 -m64 -g --dont-merge-basicblocks --return-at-end "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.ptx"  -o "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-10_CMakeCUDACompilerId.sm_52.cubin" ]
+        considering line: [  #$ fatbinary -64 --ident="C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/3.31.5/CompilerIdCUDA/CMakeCUDACompilerId.cu" --cmdline="-g --dont-merge-basicblocks --return-at-end " --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -g "--image3=kind=elf,sm=52,file=C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-10_CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.ptx" --embedded-fatbin="C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-4_CMakeCUDACompilerId.fatbin.c" ]
+        considering line: [  #$ erase C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-4_CMakeCUDACompilerId.fatbin]
+        considering line: [  #$ cl.exe -D__NV_NO_HOST_COMPILER_CHECK=1 @"C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-11.res" > "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-6_CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [  CMakeCUDACompilerId.cu]
+        considering line: [  #$ erase C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-11.res]
+        considering line: [  #$ cudafe++ --microsoft_version=1929 --msvc_target_version=1929 --compiler_bindir "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/../../../../../../.." --display_error_number --orig_src_file_name "C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/3.31.5/CompilerIdCUDA/CMakeCUDACompilerId.cu" --orig_src_path_name "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CMakeCUDACompilerId.cu" --allow_managed --debug_mode --sdk_dir "C:\\Program Files (x86)\\Windows Kits\\10" --m64 --parse_templates --gen_c_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.stub.c" --module_id_file_name "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-5_CMakeCUDACompilerId.module_id" "C:/Users/cksof/AppData/Local/Temp/tmpxft_00011664_00000000-6_CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [  #$ cl.exe @"C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-12.res" -Fo"C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/3.31.5/CompilerIdCUDA/x64/Debug/CMakeCUDACompilerId.cu.obj" ]
+        considering line: [  tmpxft_00011664_00000000-7_CMakeCUDACompilerId.cudafe1.cpp]
+        considering line: [  #$ erase C:\\Users\\cksof\\AppData\\Local\\Temp/tmpxft_00011664_00000000-12.res]
+        considering line: ["C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" Projesini Oluşturma İşlemi Tamamlandı (CudaBuildCore hedef).]
+        considering line: [Link:]
+        considering line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj"]
+          extracted link line: [link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj"]
+        considering line: [     .\\CompilerIdCUDA.lib kitaplığı ve .\\CompilerIdCUDA.exp nesnesi oluşturuluyor]
+        considering line: [LINK : warning LNK4098: defaultlib 'LIBCMT' diğer kitaplıkların kullanımı ile çakışıyor]
+        considering line: [ /NODEFAULTLIB:library kullanın [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]]
+        considering line: [  CompilerIdCUDA.vcxproj -> C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.exe]
+        considering line: [PostBuildEvent:]
+        considering line: [  echo CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe]
+        considering line: [  :VCEnd]
+        considering line: [  CMAKE_CUDA_COMPILER=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe]
+        considering line: [FinalizeBuildStatus:]
+        considering line: [  "Debug\\CompilerIdCUDA.tlog\\unsuccessfulbuild" dosyası siliniyor.]
+        considering line: [  "Debug\\CompilerIdCUDA.tlog\\CompilerIdCUDA.lastbuildstate" öğesine erişiliyor.]
+        considering line: ["C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" Projesini Oluşturma İşlemi Tamamlandı (varsayılan hedefler).]
+        considering line: [Oluşturma başarılı oldu.]
+        considering line: ["C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj" (varsayılan hedef) (1) ->]
+        considering line: [(Link hedefi) -> ]
+        considering line: [  LINK : warning LNK4098: defaultlib 'LIBCMT' diğer kitaplıkların kullanımı ile çakışıyor]
+        considering line: [ /NODEFAULTLIB:library kullanın [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj]]
+        considering line: [    1 Uyarı]
+        considering line: [    0 Hata]
+        considering line: [Geçen Süre 00:00:02.50]
+        considering line: []
+      
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCUDA.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64" cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCUDA.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCUDA.lib" /MACHINE:X64 "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj"]
+          arg [cuda-fake-ld] ==> ignore
+          arg [link.exe] ==> ignore
+          arg [/ERRORREPORT:QUEUE] ==> ignore
+          arg [/OUT:.\\CompilerIdCUDA.exe] ==> ignore
+          arg [/INCREMENTAL:NO] ==> ignore
+          arg [/NOLOGO] ==> ignore
+          arg [/LIBPATH:C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64] ==> dir [C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64]
+          arg [cudart_static.lib] ==> lib [cudart_static.lib]
+          arg [/MANIFEST] ==> ignore
+          arg [/MANIFESTUAC:level='asInvoker' uiAccess='false'] ==> ignore
+          arg [/manifest:embed] ==> ignore
+          arg [/PDB:.\\CompilerIdCUDA.pdb] ==> ignore
+          arg [/SUBSYSTEM:CONSOLE] ==> ignore
+          arg [/TLBID:1] ==> ignore
+          arg [/DYNAMICBASE] ==> ignore
+          arg [/NXCOMPAT] ==> ignore
+          arg [/IMPLIB:.\\CompilerIdCUDA.lib] ==> ignore MSVC link option
+          arg [/MACHINE:X64] ==> ignore
+          arg [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\3.31.5\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj] ==> ignore
+        collapse library dir [C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64] ==> [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/lib/x64]
+        implicit libs: [cudart_static.lib]
+        implicit objs: []
+        implicit dirs: [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/lib/x64]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CUDA compiler ABI info"
+    directories:
+      source: "C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/CMakeScratch/TryCompile-cn8obv"
+      binary: "C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/CMakeScratch/TryCompile-cn8obv"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CUDA_FLAGS: "-D_WINDOWS -Xcompiler=\" /GR /EHsc\""
+      CMAKE_CUDA_FLAGS_DEBUG: "-Xcompiler=\" -Zi -Ob0 -Od /RTC1\""
+      CMAKE_CUDA_RUNTIME_LIBRARY: "Static"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CUDA_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/CMakeScratch/TryCompile-cn8obv'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_fd54c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        .NET Framework için Microsoft (R) Build Engine sürüm 16.11.2+f32259642
+        Telif Hakkı (C) Microsoft Corporation. Tüm hakları saklıdır.
+        
+        Oluşturma başlatıldı: 19.10.2025 23:29:08.
+        1 düğümünde "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" projesi (varsayılan hedefler).
+        PrepareForBuild:
+          "cmTC_fd54c.dir\\Debug\\" dizini oluşturuluyor.
+          "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\Debug\\" dizini oluşturuluyor.
+          "cmTC_fd54c.dir\\Debug\\cmTC_fd54c.tlog\\" dizini oluşturuluyor.
+        InitializeBuildStatus:
+          "AlwaysCreate" belirtildiği için "cmTC_fd54c.dir\\Debug\\cmTC_fd54c.tlog\\unsuccessfulbuild" oluşturuluyor.
+        AddCudaCompileDeps:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=11 /D__CUDACC_VER_MINOR__=8 /D_WINDOWS /DCMAKE_INTDIR="Debug" /D_MBCS /DCMAKE_INTDIR="Debug" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include" /I. /FIcuda_runtime.h /c "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCUDACompilerABI.cu" 
+        "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" projesi (1) 1 düğümünde "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" (1:2) oluşturuyor (CudaBuildCore hedef).
+        CudaBuildCore:
+          Compiling CUDA source file ..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCUDACompilerABI.cu...
+          cmd.exe /C "C:\\Users\\cksof\\AppData\\Local\\Temp\\tmp930b8d510c7f4b4fbcb3cf1c459cdb6c.cmd"
+          "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe"  --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64" -x cu    -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include"     --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static --generate-code=arch=compute_52,code=[compute_52,sm_52] -Xcompiler="/EHsc -Zi -Ob0 -v" -g  -D"_WINDOWS" -D"CMAKE_INTDIR=\\"Debug\\"" -D_MBCS -D"CMAKE_INTDIR=\\"Debug\\"" -Xcompiler "/EHsc /W1 /nologo /Od /FdcmTC_fd54c.dir\\Debug\\vc142.pdb /FS /Zi /RTC1 /MDd /GR" -o cmTC_fd54c.dir\\Debug\\CMakeCUDACompilerABI.obj "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCUDACompilerABI.cu"
+          
+          C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe"  --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64" -x cu    -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include"     --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static --generate-code=arch=compute_52,code=[compute_52,sm_52] -Xcompiler="/EHsc -Zi -Ob0 -v" -g  -D"_WINDOWS" -D"CMAKE_INTDIR=\\"Debug\\"" -D_MBCS -D"CMAKE_INTDIR=\\"Debug\\"" -Xcompiler "/EHsc /W1 /nologo /Od /FdcmTC_fd54c.dir\\Debug\\vc142.pdb /FS /Zi /RTC1 /MDd /GR" -o cmTC_fd54c.dir\\Debug\\CMakeCUDACompilerABI.obj "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCUDACompilerABI.cu" 
+        cl : Komut satırı warning D9002: Bilinmeyen '-v' seçeneği yoksayılıyor [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]
+          CMakeCUDACompilerABI.cu
+        cl : Komut satırı warning D9002: Bilinmeyen '-v' seçeneği yoksayılıyor [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]
+          CMakeCUDACompilerABI.cu
+          CMakeCUDACompilerABI.cu
+        cl : Komut satırı warning D9002: Bilinmeyen '-v' seçeneği yoksayılıyor [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]
+        C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCompilerCUDAArch.h(10): warning C4305: 'return': 'int' iken 'bool' olarak kesildi [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]
+        "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" Projesini Oluşturma İşlemi Tamamlandı (CudaBuildCore hedef).
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\Debug\\cmTC_fd54c.exe" /INCREMENTAL /ILK:"cmTC_fd54c.dir\\Debug\\cmTC_fd54c.ilk" /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64" cudadevrt.lib cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/CMakeScratch/TryCompile-cn8obv/Debug/cmTC_fd54c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/CMakeScratch/TryCompile-cn8obv/Debug/cmTC_fd54c.lib" /MACHINE:X64  -v "cmTC_fd54c.dir\\Debug\\CMakeCUDACompilerABI.obj"
+        LINK : warning LNK4044: '/v' seçeneği tanınmadı; yoksayıldı [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]
+             C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/CMakeScratch/TryCompile-cn8obv/Debug/cmTC_fd54c.lib kitaplığı ve C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/CMakeScratch/TryCompile-cn8obv/Debug/cmTC_fd54c.exp nesnesi oluşturuluyor
+        LINK : warning LNK4098: defaultlib 'LIBCMT' diğer kitaplıkların kullanımı ile çakışıyor; /NODEFAULTLIB:library kullanın [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]
+          cmTC_fd54c.vcxproj -> C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\Debug\\cmTC_fd54c.exe
+        FinalizeBuildStatus:
+          "cmTC_fd54c.dir\\Debug\\cmTC_fd54c.tlog\\unsuccessfulbuild" dosyası siliniyor.
+          "cmTC_fd54c.dir\\Debug\\cmTC_fd54c.tlog\\cmTC_fd54c.lastbuildstate" öğesine erişiliyor.
+        "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" Projesini Oluşturma İşlemi Tamamlandı (varsayılan hedefler).
+        
+        Oluşturma başarılı oldu.
+        
+        "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" (varsayılan hedef) (1) ->
+        "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" (CudaBuildCore hedefi) (1:2) ->
+        (CudaBuildCore hedefi) -> 
+          cl : Komut satırı warning D9002: Bilinmeyen '-v' seçeneği yoksayılıyor [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]
+          cl : Komut satırı warning D9002: Bilinmeyen '-v' seçeneği yoksayılıyor [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]
+          cl : Komut satırı warning D9002: Bilinmeyen '-v' seçeneği yoksayılıyor [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]
+          C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCompilerCUDAArch.h(10): warning C4305: 'return': 'int' iken 'bool' olarak kesildi [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]
+        
+        
+        "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" (varsayılan hedef) (1) ->
+        (Link hedefi) -> 
+          LINK : warning LNK4044: '/v' seçeneği tanınmadı; yoksayıldı [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]
+          LINK : warning LNK4098: defaultlib 'LIBCMT' diğer kitaplıkların kullanımı ile çakışıyor; /NODEFAULTLIB:library kullanın [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]
+        
+            6 Uyarı
+            0 Hata
+        
+        Geçen Süre 00:00:01.62
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CUDA implicit include dir info: rv=start
+        warn: unable to parse implicit include dirs!
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CUDA implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        ignore line: [Change Dir: 'C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/CMakeScratch/TryCompile-cn8obv']
+        ignore line: []
+        ignore line: [Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_fd54c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n]
+        ignore line: [.NET Framework için Microsoft (R) Build Engine sürüm 16.11.2+f32259642]
+        ignore line: [Telif Hakkı (C) Microsoft Corporation. Tüm hakları saklıdır.]
+        ignore line: []
+        ignore line: [Oluşturma başlatıldı: 19.10.2025 23:29:08.]
+        ignore line: [1 düğümünde "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" projesi (varsayılan hedefler).]
+        ignore line: [PrepareForBuild:]
+        ignore line: [  "cmTC_fd54c.dir\\Debug\\" dizini oluşturuluyor.]
+        ignore line: [  "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\Debug\\" dizini oluşturuluyor.]
+        ignore line: [  "cmTC_fd54c.dir\\Debug\\cmTC_fd54c.tlog\\" dizini oluşturuluyor.]
+        ignore line: [InitializeBuildStatus:]
+        ignore line: [  "AlwaysCreate" belirtildiği için "cmTC_fd54c.dir\\Debug\\cmTC_fd54c.tlog\\unsuccessfulbuild" oluşturuluyor.]
+        ignore line: [AddCudaCompileDeps:]
+        ignore line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=11 /D__CUDACC_VER_MINOR__=8 /D_WINDOWS /DCMAKE_INTDIR="Debug" /D_MBCS /DCMAKE_INTDIR="Debug" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include" /I. /FIcuda_runtime.h /c "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCUDACompilerABI.cu" ]
+        ignore line: ["C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" projesi (1) 1 düğümünde "C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" (1:2) oluşturuyor (CudaBuildCore hedef).]
+        ignore line: [CudaBuildCore:]
+        ignore line: [  Compiling CUDA source file ..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCUDACompilerABI.cu...]
+        ignore line: [  cmd.exe /C "C:\\Users\\cksof\\AppData\\Local\\Temp\\tmp930b8d510c7f4b4fbcb3cf1c459cdb6c.cmd"]
+        ignore line: [  "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe"  --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64" -x cu    -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include"     --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static --generate-code=arch=compute_52 code=[compute_52 sm_52] -Xcompiler="/EHsc -Zi -Ob0 -v" -g  -D"_WINDOWS" -D"CMAKE_INTDIR=\\"Debug\\"" -D_MBCS -D"CMAKE_INTDIR=\\"Debug\\"" -Xcompiler "/EHsc /W1 /nologo /Od /FdcmTC_fd54c.dir\\Debug\\vc142.pdb /FS /Zi /RTC1 /MDd /GR" -o cmTC_fd54c.dir\\Debug\\CMakeCUDACompilerABI.obj "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCUDACompilerABI.cu"]
+        ignore line: [  ]
+        ignore line: [  C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\bin\\nvcc.exe"  --use-local-env -ccbin "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64" -x cu    -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\include"     --keep-dir x64\\Debug  -maxrregcount=0  --machine 64 --compile -cudart static --generate-code=arch=compute_52 code=[compute_52 sm_52] -Xcompiler="/EHsc -Zi -Ob0 -v" -g  -D"_WINDOWS" -D"CMAKE_INTDIR=\\"Debug\\"" -D_MBCS -D"CMAKE_INTDIR=\\"Debug\\"" -Xcompiler "/EHsc /W1 /nologo /Od /FdcmTC_fd54c.dir\\Debug\\vc142.pdb /FS /Zi /RTC1 /MDd /GR" -o cmTC_fd54c.dir\\Debug\\CMakeCUDACompilerABI.obj "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCUDACompilerABI.cu" ]
+        ignore line: [cl : Komut satırı warning D9002: Bilinmeyen '-v' seçeneği yoksayılıyor [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]]
+        ignore line: [  CMakeCUDACompilerABI.cu]
+        ignore line: [cl : Komut satırı warning D9002: Bilinmeyen '-v' seçeneği yoksayılıyor [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]]
+        ignore line: [  CMakeCUDACompilerABI.cu]
+        ignore line: [  CMakeCUDACompilerABI.cu]
+        ignore line: [cl : Komut satırı warning D9002: Bilinmeyen '-v' seçeneği yoksayılıyor [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]]
+        ignore line: [C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCompilerCUDAArch.h(10): warning C4305: 'return': 'int' iken 'bool' olarak kesildi [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]]
+        ignore line: ["C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" Projesini Oluşturma İşlemi Tamamlandı (CudaBuildCore hedef).]
+        ignore line: [Link:]
+        ignore line: [  C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\Debug\\cmTC_fd54c.exe" /INCREMENTAL /ILK:"cmTC_fd54c.dir\\Debug\\cmTC_fd54c.ilk" /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.8\\lib\\x64" cudadevrt.lib cudart_static.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/CMakeScratch/TryCompile-cn8obv/Debug/cmTC_fd54c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/CMakeScratch/TryCompile-cn8obv/Debug/cmTC_fd54c.lib" /MACHINE:X64  -v "cmTC_fd54c.dir\\Debug\\CMakeCUDACompilerABI.obj"]
+        ignore line: [LINK : warning LNK4044: '/v' seçeneği tanınmadı]
+        ignore line: [ yoksayıldı [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]]
+        ignore line: [     C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/CMakeScratch/TryCompile-cn8obv/Debug/cmTC_fd54c.lib kitaplığı ve C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/CMakeScratch/TryCompile-cn8obv/Debug/cmTC_fd54c.exp nesnesi oluşturuluyor]
+        ignore line: [LINK : warning LNK4098: defaultlib 'LIBCMT' diğer kitaplıkların kullanımı ile çakışıyor]
+        ignore line: [ /NODEFAULTLIB:library kullanın [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]]
+        ignore line: [  cmTC_fd54c.vcxproj -> C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\Debug\\cmTC_fd54c.exe]
+        ignore line: [FinalizeBuildStatus:]
+        ignore line: [  "cmTC_fd54c.dir\\Debug\\cmTC_fd54c.tlog\\unsuccessfulbuild" dosyası siliniyor.]
+        ignore line: [  "cmTC_fd54c.dir\\Debug\\cmTC_fd54c.tlog\\cmTC_fd54c.lastbuildstate" öğesine erişiliyor.]
+        ignore line: ["C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" Projesini Oluşturma İşlemi Tamamlandı (varsayılan hedefler).]
+        ignore line: []
+        ignore line: [Oluşturma başarılı oldu.]
+        ignore line: []
+        ignore line: ["C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" (varsayılan hedef) (1) ->]
+        ignore line: ["C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" (CudaBuildCore hedefi) (1:2) ->]
+        ignore line: [(CudaBuildCore hedefi) -> ]
+        ignore line: [  cl : Komut satırı warning D9002: Bilinmeyen '-v' seçeneği yoksayılıyor [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]]
+        ignore line: [  cl : Komut satırı warning D9002: Bilinmeyen '-v' seçeneği yoksayılıyor [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]]
+        ignore line: [  cl : Komut satırı warning D9002: Bilinmeyen '-v' seçeneği yoksayılıyor [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]]
+        ignore line: [  C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCompilerCUDAArch.h(10): warning C4305: 'return': 'int' iken 'bool' olarak kesildi [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]]
+        ignore line: []
+        ignore line: []
+        ignore line: ["C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj" (varsayılan hedef) (1) ->]
+        ignore line: [(Link hedefi) -> ]
+        ignore line: [  LINK : warning LNK4044: '/v' seçeneği tanınmadı]
+        ignore line: [ yoksayıldı [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]]
+        ignore line: [  LINK : warning LNK4098: defaultlib 'LIBCMT' diğer kitaplıkların kullanımı ile çakışıyor]
+        ignore line: [ /NODEFAULTLIB:library kullanın [C:\\Users\\cksof\\Desktop\\PROJELER\\CUDA\\EvolvingMemory\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cn8obv\\cmTC_fd54c.vcxproj]]
+        ignore line: []
+        ignore line: [    6 Uyarı]
+        ignore line: [    0 Hata]
+        ignore line: []
+        ignore line: [Geçen Süre 00:00:01.62]
+        ignore line: []
+        ignore line: []
+        linker tool for 'CUDA': C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CUDA compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.29.30158.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+...

@@ -1,0 +1,3 @@
+C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/evolving_memory.dir
+C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/cksof/Desktop/PROJELER/CUDA/EvolvingMemory/build/CMakeFiles/ZERO_CHECK.dir
