@@ -4,17 +4,34 @@
 #include <string.h>
 #include <time.h>
 
-// CUDA kernel to backup data
+// CUDA kernel to backup data (32-bit optimized)
 __global__ void backupData(unsigned char* data, unsigned char* backup, int dataSize) {
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    if (idx < dataSize) {
-        backup[idx] = data[idx];
+
+    // Process 32-bit words for better memory throughput
+    unsigned int* data32 = (unsigned int*)data;
+    unsigned int* backup32 = (unsigned int*)backup;
+    int numWords = dataSize / 4;
+
+    if (idx < numWords) {
+        backup32[idx] = data32[idx];
+    }
+
+    // Handle remaining bytes
+    int remainingStart = numWords * 4;
+    int remainingIdx = remainingStart + idx;
+    if (remainingIdx < dataSize) {
+        backup[remainingIdx] = data[remainingIdx];
     }
 }
 
-// CUDA kernel to mutate random bits in parallel
+// CUDA kernel to mutate random bits in parallel (32-bit optimized)
 __global__ void mutateBits(unsigned char* data, int dataSize, float mutationRate, unsigned long long seed) {
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
+
+    // Work with 32-bit words for better performance
+    unsigned int* data32 = (unsigned int*)data;
+    int numWords = dataSize / 4;  // Number of 32-bit words
     int totalBits = dataSize * 8;
     int bitsToMutate = (int)(totalBits * mutationRate);
 
@@ -25,20 +42,49 @@ __global__ void mutateBits(unsigned char* data, int dataSize, float mutationRate
 
         // Generate random bit position
         int bitPos = curand(&state) % totalBits;
-        int byteIdx = bitPos / 8;
-        int bitIdx = bitPos % 8;
+        int wordIdx = bitPos / 32;  // Which 32-bit word
+        int bitIdx = bitPos % 32;    // Which bit in that word
 
-        // Flip the bit - use simple XOR (safe since we mutate different bits each iteration)
-        unsigned char mask = 1 << bitIdx;
-        data[byteIdx] ^= mask;
+        // Flip the bit using 32-bit operation (atomic for safety)
+        if (wordIdx < numWords) {
+            unsigned int mask = 1u << bitIdx;
+            atomicXor(&data32[wordIdx], mask);
+        } else {
+            // Handle remaining bytes (if dataSize not multiple of 4)
+            // Use atomicXor on int-aligned address with proper masking
+            int byteIdx = bitPos / 8;
+            int byteBitIdx = bitPos % 8;
+            if (byteIdx < dataSize) {
+                // For unaligned bytes, use regular XOR with atomic on nearest word
+                int wordBase = byteIdx / 4;
+                int byteOffset = byteIdx % 4;
+                unsigned int fullMask = (1u << byteBitIdx) << (byteOffset * 8);
+                if (wordBase < numWords + 1 && byteIdx < dataSize) {
+                    atomicXor(&data32[wordBase], fullMask);
+                }
+            }
+        }
     }
 }
 
-// CUDA kernel to restore backup if fitness regressed
+// CUDA kernel to restore backup if fitness regressed (32-bit optimized)
 __global__ void restoreBackup(unsigned char* data, unsigned char* backup, int dataSize) {
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    if (idx < dataSize) {
-        data[idx] = backup[idx];
+
+    // Process 32-bit words for better memory throughput
+    unsigned int* data32 = (unsigned int*)data;
+    unsigned int* backup32 = (unsigned int*)backup;
+    int numWords = dataSize / 4;
+
+    if (idx < numWords) {
+        data32[idx] = backup32[idx];
+    }
+
+    // Handle remaining bytes
+    int remainingStart = numWords * 4;
+    int remainingIdx = remainingStart + idx;
+    if (remainingIdx < dataSize) {
+        data[remainingIdx] = backup[remainingIdx];
     }
 }
 
@@ -49,13 +95,31 @@ EvolvingMemoryContext* evolvingMemoryInit(const EvolvingMemoryConfig& config) {
     ctx->dataSize = config.dataSize;
     ctx->mutationRate = config.mutationRate;
     ctx->fitnessFunc = config.fitnessFunc;
+    ctx->fitnessKernel = config.fitnessKernel;
     ctx->userData = config.userData;
+    ctx->d_userData = config.d_userData;
 
-    // Verify fitness function is provided
-    if (ctx->fitnessFunc == nullptr) {
-        fprintf(stderr, "Error: Fitness function is required\n");
+    // Determine which fitness method to use
+    if (ctx->fitnessKernel != nullptr) {
+        ctx->useGpuFitness = true;
+    } else if (ctx->fitnessFunc != nullptr) {
+        ctx->useGpuFitness = false;
+    } else {
+        fprintf(stderr, "Error: Either fitnessFunc or fitnessKernel is required\n");
         delete ctx;
         return nullptr;
+    }
+
+    // Allocate device memory for fitness result if using GPU fitness
+    if (ctx->useGpuFitness) {
+        cudaError_t err = cudaMalloc(&ctx->d_fitnessResult, sizeof(float));
+        if (err != cudaSuccess) {
+            fprintf(stderr, "Error allocating device memory for fitness result: %s\n", cudaGetErrorString(err));
+            delete ctx;
+            return nullptr;
+        }
+    } else {
+        ctx->d_fitnessResult = nullptr;
     }
 
     // Allocate device memory
@@ -88,14 +152,26 @@ EvolvingMemoryContext* evolvingMemoryInit(const EvolvingMemoryConfig& config) {
     int bitsToMutate = (int)(ctx->dataSize * 8 * ctx->mutationRate);
     ctx->mutationBlockSize = dim3(256);
     ctx->mutationGridSize = dim3((bitsToMutate + ctx->mutationBlockSize.x - 1) / ctx->mutationBlockSize.x);
-    ctx->dataBlockSize = dim3(256);
-    ctx->dataGridSize = dim3((ctx->dataSize + ctx->dataBlockSize.x - 1) / ctx->dataBlockSize.x);
 
-    // Calculate initial fitness using user-provided function
-    unsigned char* h_data = new unsigned char[ctx->dataSize];
-    cudaMemcpy(h_data, ctx->d_data, ctx->dataSize, cudaMemcpyDeviceToHost);
-    ctx->currentFitness = ctx->fitnessFunc(h_data, ctx->dataSize, ctx->userData);
-    delete[] h_data;
+    // For backup/restore, calculate based on max(32-bit words, remaining bytes)
+    int numWords = ctx->dataSize / 4;
+    int maxElements = (numWords > ctx->dataSize) ? numWords : ctx->dataSize;
+    ctx->dataBlockSize = dim3(256);
+    ctx->dataGridSize = dim3((maxElements + ctx->dataBlockSize.x - 1) / ctx->dataBlockSize.x);
+
+    // Calculate initial fitness
+    if (ctx->useGpuFitness) {
+        // Use GPU kernel
+        ctx->fitnessKernel(ctx->d_data, ctx->d_fitnessResult, ctx->dataSize, ctx->d_userData);
+        cudaDeviceSynchronize();
+        cudaMemcpy(&ctx->currentFitness, ctx->d_fitnessResult, sizeof(float), cudaMemcpyDeviceToHost);
+    } else {
+        // Use CPU function
+        unsigned char* h_data = new unsigned char[ctx->dataSize];
+        cudaMemcpy(h_data, ctx->d_data, ctx->dataSize, cudaMemcpyDeviceToHost);
+        ctx->currentFitness = ctx->fitnessFunc(h_data, ctx->dataSize, ctx->userData);
+        delete[] h_data;
+    }
 
     return ctx;
 }
@@ -105,6 +181,7 @@ void evolvingMemoryFree(EvolvingMemoryContext* ctx) {
     if (ctx) {
         if (ctx->d_data) cudaFree(ctx->d_data);
         if (ctx->d_backup) cudaFree(ctx->d_backup);
+        if (ctx->d_fitnessResult) cudaFree(ctx->d_fitnessResult);
         delete ctx;
     }
 }
@@ -121,11 +198,20 @@ float evolvingMemoryEvolveOnce(EvolvingMemoryContext* ctx, int iteration) {
         ctx->d_data, ctx->dataSize, ctx->mutationRate, seed);
     cudaDeviceSynchronize();
 
-    // Step 3: Evaluate fitness using user-provided function
-    unsigned char* h_data = new unsigned char[ctx->dataSize];
-    cudaMemcpy(h_data, ctx->d_data, ctx->dataSize, cudaMemcpyDeviceToHost);
-    float newFitness = ctx->fitnessFunc(h_data, ctx->dataSize, ctx->userData);
-    delete[] h_data;
+    // Step 3: Evaluate fitness
+    float newFitness;
+    if (ctx->useGpuFitness) {
+        // Use GPU kernel (no device-to-host copy needed!)
+        ctx->fitnessKernel(ctx->d_data, ctx->d_fitnessResult, ctx->dataSize, ctx->d_userData);
+        cudaDeviceSynchronize();
+        cudaMemcpy(&newFitness, ctx->d_fitnessResult, sizeof(float), cudaMemcpyDeviceToHost);
+    } else {
+        // Use CPU function (requires device-to-host copy)
+        unsigned char* h_data = new unsigned char[ctx->dataSize];
+        cudaMemcpy(h_data, ctx->d_data, ctx->dataSize, cudaMemcpyDeviceToHost);
+        newFitness = ctx->fitnessFunc(h_data, ctx->dataSize, ctx->userData);
+        delete[] h_data;
+    }
 
     // Step 4: If regression, restore backup
     if (newFitness > ctx->currentFitness) {
@@ -140,7 +226,7 @@ float evolvingMemoryEvolveOnce(EvolvingMemoryContext* ctx, int iteration) {
     return ctx->currentFitness;
 }
 
-// Run evolution loop until target is found or max iterations reached
+    // Run evolution loop until optimal fitness is found or max iterations reached
 int evolvingMemoryEvolve(EvolvingMemoryContext* ctx, int maxIterations, bool verbose) {
     if (verbose) {
         printf("Initial state:\n");
@@ -157,16 +243,16 @@ int evolvingMemoryEvolve(EvolvingMemoryContext* ctx, int maxIterations, bool ver
             evolvingMemoryPrintState(ctx, iter);
         }
 
-        // Check if we found the solution
+        // Check if we reached optimal fitness
         if (newFitness == 0.0f) {
             if (verbose) {
-                printf("\n*** SUCCESS! Found target in %d iterations ***\n", iter);
+                printf("\n*** SUCCESS! Achieved optimal fitness in %d iterations ***\n", iter);
             }
             return iter;
         }
     }
 
-    return -1; // Target not found
+    return -1; // Optimal fitness not achieved
 }
 
 // Get current data state

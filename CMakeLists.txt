@@ -29,11 +29,19 @@ target_include_directories(evolving_memory_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR
 option(BUILD_EXAMPLES "Build example programs" ON)
 
 if(BUILD_EXAMPLES)
-    # Hello World example
+    # Hello World example (CPU fitness)
     add_executable(hello_world examples/hello_world.cu)
     set_target_properties(hello_world PROPERTIES
         CUDA_SEPARABLE_COMPILATION ON
         CUDA_ARCHITECTURES "61;75;86"
     )
     target_link_libraries(hello_world evolving_memory_lib)
+
+    # Hello World GPU example (GPU fitness kernel)
+    add_executable(hello_world_gpu examples/hello_world_gpu.cu)
+    set_target_properties(hello_world_gpu PROPERTIES
+        CUDA_SEPARABLE_COMPILATION ON
+        CUDA_ARCHITECTURES "61;75;86"
+    )
+    target_link_libraries(hello_world_gpu evolving_memory_lib)
 endif()

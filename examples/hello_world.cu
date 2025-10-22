@@ -6,8 +6,11 @@
 const char TARGET[] = "HELLO WORLD";
 
 /**
- * Custom fitness function that calculates Hamming distance
+ * CPU-based fitness function that calculates Hamming distance
  * Lower score is better, 0.0 means perfect match
+ *
+ * This is a simple example demonstrating CPU-based fitness evaluation.
+ * The library will copy data from device to host for each fitness evaluation.
  */
 float calculateHammingDistance(const unsigned char* data, int dataSize, void* userData) {
     const char* target = (const char*)userData;
@@ -27,19 +30,22 @@ float calculateHammingDistance(const unsigned char* data, int dataSize, void* us
 
 int main() {
     printf("=== Evolving Memory - Hello World Example ===\n");
+    printf("This example uses CPU-based fitness evaluation\n");
     printf("Target: \"%s\"\n", TARGET);
     printf("Data Size: %d bytes\n", (int)strlen(TARGET));
     printf("Mutation Rate: 10.0%%\n");
     printf("Max Iterations: 10000\n");
-    printf("=============================================\n\n");
+    printf("=================================================\n\n");
 
-    // Configure evolving memory with custom fitness function
-    EvolvingMemoryConfig config;
-    config.dataSize = strlen(TARGET);           // "HELLO WORLD" is 11 characters
-    config.mutationRate = 0.1f;                 // 10% mutation rate
-    config.maxIterations = 10000;               // Maximum iterations
-    config.fitnessFunc = calculateHammingDistance;  // Custom fitness function
-    config.userData = (void*)TARGET;            // Pass target as user data
+    // Configure evolving memory with CPU fitness function
+    EvolvingMemoryConfig config = {0};
+    config.dataSize = strlen(TARGET);
+    config.mutationRate = 0.1f;
+    config.maxIterations = 10000;
+    config.fitnessFunc = calculateHammingDistance;  // CPU function
+    config.fitnessKernel = nullptr;                 // No GPU kernel
+    config.userData = (void*)TARGET;                // Host memory pointer
+    config.d_userData = nullptr;                    // No device memory
 
     // Initialize evolving memory
     EvolvingMemoryContext* ctx = evolvingMemoryInit(config);
@@ -48,12 +54,16 @@ int main() {
         return 1;
     }
 
+    printf("Using CPU-based fitness function (requires device-to-host transfers)\n\n");
+
     // Run evolution with verbose output
     int iterations = evolvingMemoryEvolve(ctx, config.maxIterations, true);
 
     // Print final state
+    printf("\n");
     if (iterations > 0) {
-        printf("\nFinal state:\n");
+        printf("*** SUCCESS! Found target in %d iterations ***\n\n", iterations);
+        printf("Final state:\n");
         evolvingMemoryPrintState(ctx, iterations);
 
         // Get and verify the final data
@@ -66,7 +76,7 @@ int main() {
         printf("\"\n");
         delete[] finalData;
     } else {
-        printf("\nFailed to find target within %d iterations\n", config.maxIterations);
+        printf("Failed to find target within %d iterations\n", config.maxIterations);
         printf("Final state:\n");
         evolvingMemoryPrintState(ctx, config.maxIterations);
     }

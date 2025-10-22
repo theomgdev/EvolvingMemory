@@ -8,13 +8,25 @@
 struct EvolvingMemoryContext;
 
 /**
- * @brief Fitness function callback type
- * @param data Current data buffer
+ * @brief CPU-based fitness function callback type
+ * @param data Current data buffer (host memory)
  * @param dataSize Size of data in bytes
  * @param userData User-provided data pointer (can be NULL)
  * @return Fitness score (lower is better, 0.0 is perfect)
  */
 typedef float (*FitnessFunction)(const unsigned char* data, int dataSize, void* userData);
+
+/**
+ * @brief GPU-based fitness kernel callback type
+ * @param d_data Current data buffer (device memory)
+ * @param d_result Output fitness score (device memory, single float)
+ * @param dataSize Size of data in bytes
+ * @param userData User-provided data pointer (can be NULL)
+ *
+ * This kernel should compute the fitness and store it in d_result.
+ * The kernel is responsible for proper reduction to a single float value.
+ */
+typedef void (*FitnessKernel)(const unsigned char* d_data, float* d_result, int dataSize, void* userData);
 
 /**
  * @brief Configuration structure for evolving memory
@@ -23,25 +35,34 @@ struct EvolvingMemoryConfig {
     int dataSize;                   // Size of data in bytes
     float mutationRate;             // Mutation rate (0.0 to 1.0)
     int maxIterations;              // Maximum evolution iterations
-    FitnessFunction fitnessFunc;    // User-provided fitness function
-    void* userData;                 // User data passed to fitness function (optional)
+
+    // Fitness evaluation (provide ONE of these)
+    FitnessFunction fitnessFunc;    // CPU-based fitness function (requires device-to-host copy)
+    FitnessKernel fitnessKernel;    // GPU-based fitness kernel (no copy needed, faster)
+
+    void* userData;                 // User data passed to fitness function/kernel (optional)
+    void* d_userData;               // Device memory user data (for GPU kernels, optional)
 };
 
 /**
  * @brief Context structure for evolving memory operations
  */
 struct EvolvingMemoryContext {
-    unsigned char* d_data;      // Device memory for data
-    unsigned char* d_backup;    // Device memory for backup
-    int dataSize;               // Size of data in bytes
-    float mutationRate;         // Mutation rate
-    FitnessFunction fitnessFunc;// Fitness function callback
-    void* userData;             // User data for fitness function
-    float currentFitness;       // Current fitness score
-    dim3 mutationBlockSize;     // Block size for mutation kernel
-    dim3 mutationGridSize;      // Grid size for mutation kernel
-    dim3 dataBlockSize;         // Block size for data operations
-    dim3 dataGridSize;          // Grid size for data operations
+    unsigned char* d_data;          // Device memory for data
+    unsigned char* d_backup;        // Device memory for backup
+    float* d_fitnessResult;         // Device memory for fitness result (GPU kernel mode)
+    int dataSize;                   // Size of data in bytes
+    float mutationRate;             // Mutation rate
+    FitnessFunction fitnessFunc;    // CPU fitness function callback
+    FitnessKernel fitnessKernel;    // GPU fitness kernel callback
+    void* userData;                 // User data for fitness function
+    void* d_userData;               // Device user data for fitness kernel
+    bool useGpuFitness;             // True if using GPU kernel, false for CPU function
+    float currentFitness;           // Current fitness score
+    dim3 mutationBlockSize;         // Block size for mutation kernel
+    dim3 mutationGridSize;          // Grid size for mutation kernel
+    dim3 dataBlockSize;             // Block size for data operations
+    dim3 dataGridSize;              // Grid size for data operations
 };
 
 // CUDA kernels
