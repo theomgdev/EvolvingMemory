@@ -31,7 +31,6 @@ __global__ void mutateBits(unsigned char* data, int dataSize, float mutationRate
 
     // Work with 32-bit words for better performance
     unsigned int* data32 = (unsigned int*)data;
-    int numWords = dataSize / 4;  // Number of 32-bit words
     int totalBits = dataSize * 8;
     int bitsToMutate = (int)(totalBits * mutationRate);
 
@@ -45,25 +44,11 @@ __global__ void mutateBits(unsigned char* data, int dataSize, float mutationRate
         int wordIdx = bitPos / 32;  // Which 32-bit word
         int bitIdx = bitPos % 32;    // Which bit in that word
 
-        // Flip the bit using 32-bit operation (atomic for safety)
-        if (wordIdx < numWords) {
-            unsigned int mask = 1u << bitIdx;
-            atomicXor(&data32[wordIdx], mask);
-        } else {
-            // Handle remaining bytes (if dataSize not multiple of 4)
-            // Use atomicXor on int-aligned address with proper masking
-            int byteIdx = bitPos / 8;
-            int byteBitIdx = bitPos % 8;
-            if (byteIdx < dataSize) {
-                // For unaligned bytes, use regular XOR with atomic on nearest word
-                int wordBase = byteIdx / 4;
-                int byteOffset = byteIdx % 4;
-                unsigned int fullMask = (1u << byteBitIdx) << (byteOffset * 8);
-                if (wordBase < numWords + 1 && byteIdx < dataSize) {
-                    atomicXor(&data32[wordBase], fullMask);
-                }
-            }
-        }
+        // Flip the bit using 32-bit atomic operation
+        // Note: This works correctly even for the last partial word
+        // because atomicXor operates on 4-byte aligned addresses
+        unsigned int mask = 1u << bitIdx;
+        atomicXor(&data32[wordIdx], mask);
     }
 }
 
