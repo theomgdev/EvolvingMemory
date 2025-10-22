@@ -1,34 +1,71 @@
 # Evolving Memory
 
-A simple CUDA-based genetic algorithm that evolves random binary data towards a target string using parallel bit mutations.
+A CUDA-based genetic algorithm library that evolves random binary data towards a target string using parallel bit mutations.
 
 ## Concept
 
 The algorithm works as follows:
 
-1. **Initialize**: Start with random bytes in GPU memory (default: 11 bytes)
-2. **Mutate**: Flip random bits in parallel on the GPU (default: 10% of total bits)
-3. **Evaluate**: Calculate fitness (Hamming distance to target "HELLO WORLD")
+1. **Initialize**: Start with random bytes in GPU memory
+2. **Mutate**: Flip random bits in parallel on the GPU
+3. **Evaluate**: Calculate fitness (Hamming distance to target)
 4. **Select**: Keep changes if fitness improved or stayed same, otherwise revert
 5. **Repeat**: Continue until target is found or max iterations reached
 
 ## Features
 
+- Library-based API for easy integration
 - Parallel bit mutations using CUDA
 - Configurable mutation rate and data size
 - Simple fitness function (Hamming distance)
 - Automatic rollback on regression
 - Real-time progress display
 
-## Configurable Parameters
+## Library Usage
 
-Edit these in [main.cu](main.cu):
+### Include the library
 
 ```cpp
-#define DATA_SIZE 11           // RAM size in bytes
-#define MUTATION_RATE 0.1f     // 10% mutation rate
-#define MAX_ITERATIONS 10000   // Maximum evolution iterations
+#include "evolving_memory.cuh"
 ```
+
+### Basic Example
+
+```cpp
+// Configure evolving memory
+EvolvingMemoryConfig config;
+config.dataSize = 11;              // "HELLO WORLD" is 11 characters
+config.mutationRate = 0.1f;        // 10% mutation rate
+config.maxIterations = 10000;      // Maximum iterations
+config.target = "HELLO WORLD";     // Target string
+
+// Initialize evolving memory
+EvolvingMemoryContext* ctx = evolvingMemoryInit(config);
+if (!ctx) {
+    fprintf(stderr, "Failed to initialize evolving memory\n");
+    return 1;
+}
+
+// Run evolution with verbose output
+int iterations = evolvingMemoryEvolve(ctx, true);
+
+// Get final data
+unsigned char finalData[11];
+evolvingMemoryGetData(ctx, finalData);
+
+// Cleanup
+evolvingMemoryFree(ctx);
+```
+
+### API Functions
+
+- `evolvingMemoryInit(config)` - Initialize context with configuration
+- `evolvingMemoryFree(ctx)` - Free context and GPU memory
+- `evolvingMemoryEvolve(ctx, verbose)` - Run full evolution loop
+- `evolvingMemoryEvolveOnce(ctx, iteration)` - Run single iteration
+- `evolvingMemoryGetData(ctx, output)` - Get current data state
+- `evolvingMemoryPrintState(ctx, iteration)` - Print current state
+- `evolvingMemoryCalculateFitness(ctx)` - Calculate fitness score
 
 ## Build Instructions
 
@@ -38,7 +75,7 @@ Edit these in [main.cu](main.cu):
 - CMake 3.18 or higher
 - C++ compiler
 
-### Build
+### Build Library and Examples
 
 ```bash
 mkdir build
@@ -47,10 +84,18 @@ cmake ..
 cmake --build .
 ```
 
-### Run
+### Build Library Only (No Examples)
 
 ```bash
-./evolving_memory
+cmake -DBUILD_EXAMPLES=OFF ..
+cmake --build .
+```
+
+### Run Examples
+
+```bash
+# Hello World example
+./hello_world
 ```
 
 ## Example Output
